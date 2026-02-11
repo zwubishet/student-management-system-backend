@@ -1,2 +1,3 @@
 - "!include platform_schools.yaml"
+- "!include school_roles.yaml"
 - "!include school_users.yaml"
