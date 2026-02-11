@@ -1,0 +1,11 @@
+-- Could not auto-generate a down migration.
+-- Please write an appropriate down migration for the SQL below:
+-- CREATE TABLE platform.schools (
+--   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+--   name TEXT NOT NULL,
+--   email TEXT,
+--   phone TEXT,
+--   address TEXT,
+--   subscription_plan TEXT DEFAULT 'free',
+--   created_at TIMESTAMP DEFAULT now()
+-- );
