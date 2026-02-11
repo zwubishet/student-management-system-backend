@@ -1,0 +1,33 @@
+version: "3.9"
+
+services:
+  postgres:
+    image: postgres:15
+    container_name: sms_postgres
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: sms_db
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5433:5432"
+
+  hasura:
+    image: hasura/graphql-engine:v2.38.0
+    container_name: sms_hasura
+    restart: always
+    ports:
+      - "8081:8080"   # changed host port from 8080 → 8081
+    depends_on:
+      - postgres
+    environment:
+      HASURA_GRAPHQL_DATABASE_URL: postgres://postgres:postgres@postgres:5432/sms_db
+      HASURA_GRAPHQL_ENABLE_CONSOLE: "true"
+      HASURA_GRAPHQL_DEV_MODE: "true"
+      HASURA_GRAPHQL_ADMIN_SECRET: adminsecret
+      HASURA_GRAPHQL_UNAUTHORIZED_ROLE: anonymous
+
+volumes:
+  postgres_data:

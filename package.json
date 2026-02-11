@@ -1,0 +1,36 @@
+{
+  "name": "y",
+  "version": "y",
+  "description": "y",
+  "main": "y",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "hasura:console": "hasura-cli console --project hasura",
+    "hasura:apply": "hasura-cli migrate apply --project hasura --all-databases",
+    "hasura:create": "hasura-cli migrate create",
+    "hasura:export": "hasura-cli metadata export --project hasura",
+    "hasura:apply-metadata": "hasura-cli metadata apply --project hasura",
+
+    "docker:up": "docker compose -f docker-compose.yml up -d",
+    "docker:down": "docker compose -f docker-compose.yml down",
+    "docker:logs": "docker compose -f docker-compose.yml logs -f",
+    
+    "dev:all": "yarn docker:up && yarn dev && yarn hasura:console"
+  },
+  "repository": "n",
+  "author": "wubishet",
+  "license": "MIT",
+  "devDependencies": {
+    "morgan": "^1.10.0",
+    "nodemon": "^3.0.1"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "colors": "^1.4.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2"
+  }
+}
