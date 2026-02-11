@@ -1,3 +1,60 @@
 table:
   name: users
   schema: school
+select_permissions:
+  - role: SCHOOL_ADMIN
+    permission:
+      columns:
+        - is_active
+        - email
+        - full_name
+        - password
+        - role
+        - created_at
+        - id
+        - school_id
+      filter: {}
+      allow_aggregations: true
+    comment: ""
+  - role: STUDENT
+    permission:
+      columns:
+        - is_active
+        - email
+        - full_name
+        - password
+        - role
+        - created_at
+        - id
+        - school_id
+      filter: {}
+      allow_aggregations: true
+    comment: ""
+  - role: SUPER_ADMIN
+    permission:
+      columns:
+        - is_active
+        - email
+        - full_name
+        - password
+        - role
+        - created_at
+        - id
+        - school_id
+      filter: {}
+      allow_aggregations: true
+    comment: ""
+  - role: TEACHER
+    permission:
+      columns:
+        - is_active
+        - email
+        - full_name
+        - password
+        - role
+        - created_at
+        - id
+        - school_id
+      filter: {}
+      allow_aggregations: true
+    comment: ""

@@ -1,3 +1,36 @@
 table:
   name: roles
   schema: school
+select_permissions:
+  - role: SCHOOL_ADMIN
+    permission:
+      columns:
+        - name
+        - id
+      filter: {}
+      allow_aggregations: true
+    comment: ""
+  - role: STUDENT
+    permission:
+      columns:
+        - name
+        - id
+      filter: {}
+      allow_aggregations: true
+    comment: ""
+  - role: SUPER_ADMIN
+    permission:
+      columns:
+        - name
+        - id
+      filter: {}
+      allow_aggregations: true
+    comment: ""
+  - role: TEACHER
+    permission:
+      columns:
+        - name
+        - id
+      filter: {}
+      allow_aggregations: true
+    comment: ""
