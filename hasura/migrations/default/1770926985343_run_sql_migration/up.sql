@@ -1,0 +1,7 @@
+CREATE TABLE teacher.teachers (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    user_id UUID UNIQUE REFERENCES school.users(id) ON DELETE CASCADE,
+    school_id UUID REFERENCES platform.schools(id),
+    hire_date DATE,
+    created_at TIMESTAMP DEFAULT now()
+);

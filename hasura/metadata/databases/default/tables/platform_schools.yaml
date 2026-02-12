@@ -1,3 +1,32 @@
 table:
   name: schools
   schema: platform
+select_permissions:
+  - role: SCHOOL_ADMIN
+    permission:
+      columns:
+        - address
+        - email
+        - name
+        - phone
+        - subscription_plan
+        - created_at
+        - id
+      filter:
+        id:
+          _eq: X-Hasura-School-Id
+      allow_aggregations: true
+    comment: ""
+  - role: SUPER_ADMIN
+    permission:
+      columns:
+        - address
+        - email
+        - name
+        - phone
+        - subscription_plan
+        - created_at
+        - id
+      filter: {}
+      allow_aggregations: true
+    comment: ""

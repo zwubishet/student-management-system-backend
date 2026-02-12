@@ -1,0 +1,8 @@
+-- Could not auto-generate a down migration.
+-- Please write an appropriate down migration for the SQL below:
+-- CREATE TABLE school.user_roles (
+--     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+--     user_id UUID REFERENCES school.users(id) ON DELETE CASCADE,
+--     role_id UUID REFERENCES school.roles(id) ON DELETE CASCADE,
+--     UNIQUE(user_id, role_id)
+-- );

@@ -1,3 +1,7 @@
 - "!include platform_schools.yaml"
+- "!include school_refresh_tokens.yaml"
 - "!include school_roles.yaml"
+- "!include school_user_roles.yaml"
 - "!include school_users.yaml"
+- "!include student_students.yaml"
+- "!include teacher_teachers.yaml"

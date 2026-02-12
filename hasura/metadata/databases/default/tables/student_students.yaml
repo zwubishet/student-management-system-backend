@@ -1,0 +1,41 @@
+table:
+  name: students
+  schema: student
+select_permissions:
+  - role: SCHOOL_ADMIN
+    permission:
+      columns:
+        - grade
+        - created_at
+        - id
+        - school_id
+        - user_id
+      filter:
+        school_id:
+          _eq: X-Hasura-School-Id
+      allow_aggregations: true
+    comment: ""
+  - role: STUDENT
+    permission:
+      columns:
+        - grade
+        - created_at
+        - id
+        - school_id
+        - user_id
+      filter:
+        user_id:
+          _eq: X-Hasura-User-Id
+      allow_aggregations: true
+    comment: ""
+  - role: SUPER_ADMIN
+    permission:
+      columns:
+        - grade
+        - created_at
+        - id
+        - school_id
+        - user_id
+      filter: {}
+      allow_aggregations: true
+    comment: ""

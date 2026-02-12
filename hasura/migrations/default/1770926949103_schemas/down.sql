@@ -1,0 +1,6 @@
+-- Could not auto-generate a down migration.
+-- Please write an appropriate down migration for the SQL below:
+-- CREATE SCHEMA IF NOT EXISTS platform;
+-- CREATE SCHEMA IF NOT EXISTS school;
+-- CREATE SCHEMA IF NOT EXISTS teacher;
+-- CREATE SCHEMA IF NOT EXISTS student;
