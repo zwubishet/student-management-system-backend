@@ -1,0 +1,13 @@
+-- Could not auto-generate a down migration.
+-- Please write an appropriate down migration for the SQL below:
+-- CREATE TABLE school.class_assignments (
+--     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+--     school_id UUID NOT NULL REFERENCES platform.schools(id) ON DELETE CASCADE,
+--     academic_year_id UUID NOT NULL REFERENCES platform.academic_years(id),
+--     teacher_id UUID NOT NULL REFERENCES school.users(id),
+--     subject_id UUID NOT NULL REFERENCES school.subjects(id),
+--     classroom_id UUID NOT NULL REFERENCES school.classrooms(id),
+--
+--     -- Prevents assigning the same teacher the same subject in the same room twice
+--     UNIQUE(academic_year_id, teacher_id, subject_id, classroom_id)
+-- );
